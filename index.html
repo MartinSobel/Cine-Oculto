@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>Cine Oculto</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Cine oculto</h1>
+        <p>Próximo streaming:</p><p id="demo"></p>
+    </header>
+    
+    <script>
+        let countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
+        let x = setInterval(function() {
+        let now = new Date().getTime();
+        let distance = countDownDate - now;
+        let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+          }
+        }, 1000);
+        </script>
+
+    <div id="main">
+        <iframe width="645" height="400" src="https://www.youtube.com/embed/dvGQbIUz6SM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://minnit.chat/CineOculto?embed&dark&nickname=" width='300' height='400' style="border:none;" allowTransparency="true"></iframe><br><a href="https://minnit.chat/CineOculto" target="_blank">Free HTML5 Chatroom powered by Minnit Chat</a>
+    </div>
+</body>
+</html>

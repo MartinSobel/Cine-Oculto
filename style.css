@@ -1,0 +1,23 @@
+body{
+    background-color: black;
+    color: white;
+    overflow: hidden;
+}
+
+a{
+    color:black;
+}
+
+iframe{
+    padding: 5%;
+}
+
+header{
+    text-align: center;
+}
+
+#main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
