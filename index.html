@@ -4,37 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="favicon.png">
+    <script src="app.js"></script>
     <title>Cine Oculto</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Cine oculto</h1>
-        <p>Próximo streaming:</p><p id="demo"></p>
+        <div id="head">
+            <div class="head">
+                <img src="logo.png" alt="logo">
+            </div>
+            <div>
+                <p id="ciclo">Ciclo de experimentación audiovisual, apropiación de imágenes que evocan a la memoria</p>
+            </div>
+        </div>
     </header>
-    
-    <script>
-        let countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
-        let x = setInterval(function() {
-        let now = new Date().getTime();
-        let distance = countDownDate - now;
-        let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        let seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-        + minutes + "m " + seconds + "s ";
-          if (distance < 0) {
-            clearInterval(x);
-            document.getElementById("demo").innerHTML = "EXPIRED";
-          }
-        }, 1000);
-        </script>
 
+    <!-- <div id="prox"><p>Próximo streaming:</p><p id="demo"></p></div> -->
     <div id="main">
-        <iframe width="645" height="400" src="https://www.youtube.com/embed/dvGQbIUz6SM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <iframe src="https://minnit.chat/CineOculto?embed&dark&nickname=" width='300' height='400' style="border:none;" allowTransparency="true"></iframe><br><a href="https://minnit.chat/CineOculto" target="_blank">Free HTML5 Chatroom powered by Minnit Chat</a>
+        <iframe width="650" height="400" id="yt" src="https://www.youtube.com/embed/dvGQbIUz6SM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <script id="cid0020000259748024294" data-cfasync="false" async src="//st.chatango.com/js/gz/emb.js" style="width: 300px;height: 400px;">{"handle":"cineoculto","arch":"js","styles":{"a":"000000","b":100,"c":"FFFFFF","d":"FFFFFF","k":"000000","l":"000000","m":"000000","n":"FFFFFF","p":"10","q":"000000","r":100}}</script>
+    </div>
+    <div>
+        <p class="desc">Curado por Federico Goldemberg y Victoria Fulloni</p>
+        <p class="desc"> 
+            [ES] Cine Oculto es el ciclo de cine experimental que lleva como eje principal la re-utilización e
+            intervención de material de archivo audiovisual. En tiempos donde abunda una dificultad económica
+            nacional, la re-utilización de archivo como materia prima de trabajo se vuelve un hecho político
+            más allá de su fin estético. En un diálogo constante, y a veces accidentado, con la memoria,
+            Cine Oculto celebra y fomenta las formas alternativas de ver y pensar el medio, de ver, pensar y
+            hacer cine.
+            Debido a las medidas de aislamiento social tomadas por el COVID-19 decidimos adoptar esta modalidad
+            Live Stream que muchxs estamos aprendiendo a tomar.
+        </p>
+        <p class="desc">
+            [EN] Cine Oculto is an experimental film cycle which main aixes is the re-utilization and intervention
+            of audiovisual found-footage. In times in which the economical difficulties are a real issue,
+            the re-utilization of found footage as raw material isn’t just aesthetic but also a political fact.
+            Cine Oculto is in constant dialogue with the memory, celebrates and encourages alternative ways of
+            seeing and thinking the cinema.  Due to the isolation policies taken because of the COVID-19, we
+            decided to adopt the Live Stream way.
+        </p>
     </div>
 </body>
 </html>
