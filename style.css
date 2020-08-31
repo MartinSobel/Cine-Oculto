@@ -8,6 +8,8 @@ body{
     font-family: 'Bebas Neue', cursive;
 }
 
+
+
 #prox{
     display: flex;
 }
@@ -46,16 +48,43 @@ img{
 
 #ciclo{
     float: right;
+    font-size: 1.4rem;
 }
 
 .desc{
+    font-size: 1.1rem;
+    padding-top: 2%;
     padding-left: 1%;
     padding-right: 5%;
 }
 
-::-webkit-scrollbar {
-    width: 10px;
+a{
+    color: #dcdcdc;
+    text-decoration: none;
+}
+
+#footer{
+    color: #aaaaaa;
+    padding-bottom: 10px;
+}
+
+footer{
+    margin-top: 5%;
+    text-align: center;
+    width: 100%;
+}
+
+.fa {
+    padding-top: 15px;
+    font-size: 30px;
+    width: 50px;
   }
+
+
+/* Scrollbar */
+::-webkit-scrollbar {
+width: 10px;
+}
 
 ::-webkit-scrollbar-track {
 background: #f1f1f1;
